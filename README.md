@@ -53,10 +53,11 @@ The project is organized into a modular package for better maintainability and c
 
 * 🎨 **ASCII Art Interface**: Visually distinct headers for every action with custom ASCII art for each menu.
 * 📖 **Journal Organization**: Automatically manages a `./journals` directory to keep your entries organized.
-* 📝 **Full CRUD Support**:
+* 📝 **Partial CRUD Support**:
   * **Create**: Generate new journals (folders) and entries (.txt files) with timestamps.
   * **Read**: Browse existing journals and read specific entries with formatted display.
   * **Delete**: Remove specific entries or entire journals with confirmation prompts.
+  * ⚠️ **Update**: Not yet implemented - entries cannot be edited after creation.
 
 * 🛡️ **Input Sanitization**: Automatically converts spaces to underscores and validates against illegal characters for file system compatibility.
 * ⏰ **Automatic Timestamps**: Each entry automatically records creation time and associated journal information.
