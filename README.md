@@ -32,15 +32,17 @@ python3 main.py
 
 The project is structured as a Python package for better modularity:
 
-* **`main.py`**: The entry point of the application.
-* **`journal_utils/`**: The core package containing:
-* `ascii_art.py`: Visual assets for the CLI.
-* `create_functions.py` & `remove_functions.py`: Logic for file and folder manipulation.
-* `menus.py`: UI logic and screen management.
-* `read_journal.py`: Logic for searching and displaying entries.
-* `validity.py`: Input sanitization and path checking.
-* `utils.py`: The main controller that handles user input and navigation.
-
+.
+├── main.py                # App entry point; launches the main menu
+└── journal_utils/         # Core logic package
+    ├── __init__.py        # Package initialization
+    ├── ascii_art.py       # Visual assets and CLI decorations
+    ├── create_functions.py # Logic for creating folders and files
+    ├── menus.py           # UI layouts and screen management
+    ├── read_journal.py    # Logic for searching and displaying text
+    ├── remove_functions.py # Logic for deleting entries and journals
+    ├── utils.py           # Controller for user input and navigation
+    └── validity.py        # Input sanitization and path validation
 
 
 ---
