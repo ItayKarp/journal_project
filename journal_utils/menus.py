@@ -41,13 +41,12 @@ def entry_form(journal_name, entry_name):
 
 def create_entry_menu(journal_name = None):
     clear_screen()
-    if not check_file_name_len(journal_name):
-        return
     if journal_name is None:
         journal_name = get_journal_name()
+    if not check_file_name_len(journal_name):
+        return
     journal_path = os.path.join(BASE_PATH, journal_name)
     ascii_art.art_create_entry(journal_name)
-    display_entries(journal_name)
     file_name = check_file_type()
     if not file_name:
         return

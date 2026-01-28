@@ -1,0 +1,6 @@
+
+    Time of usage: 2026-01-28 06:58:04.071585
+    Current Journal: test
+    Current Entry: random.txt
+    woohoo
+    

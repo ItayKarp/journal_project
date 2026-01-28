@@ -1,5 +1,5 @@
 import os
-ILLEGAL_CHARACTERS = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '/']
+ILLEGAL_CHARACTERS = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '=', '+', '/']
 BASE_PATH = './journals'
 
 def check_illegal(user_input):
@@ -11,7 +11,7 @@ def check_illegal(user_input):
 def check_blank(user_input):
     if " " in user_input:
         user_input = user_input.strip()
-        if not user_input:
+        if user_input == "":
             print("Please enter a valid journal name.")
             return False
     return True

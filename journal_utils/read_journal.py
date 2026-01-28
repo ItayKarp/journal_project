@@ -5,14 +5,15 @@ from . import ascii_art
 BASE_PATH = "./journals"
 def display_entries(journal_name):
     journal_path = os.path.join(BASE_PATH, journal_name)
+    print("""
+        ----------------------------
+                        """)
+    print("Entries:")
     for i in os.listdir(journal_path):
         if not i.startswith("."):
-            print("Entries:")
-            print(i.replace("_", " "))
-            print("""
-        ----------------------------
-        """)
-
+            i = os.path.splitext(i)[0]
+            print((i.replace("_", " ")))
+            print("")
 
 
 def display_journals():
@@ -20,9 +21,7 @@ def display_journals():
         if not i.startswith('.'):
             print("Journals:")
             print(i)
-            print("""
-                    ----------------------------
-                    """)
+            print("")
 
 def read_journal(journal_name, entry_name):
     journal_path = os.path.join(BASE_PATH, journal_name)
@@ -37,8 +36,8 @@ def read_journal(journal_name, entry_name):
         return
 
 def search_journals():
-    display_journals()
     ascii_art.search()
+    display_journals()
     journal = input("Enter the journal's name:\n ")
     if os.path.exists("./journals/" + journal):
         display_entries(journal)
